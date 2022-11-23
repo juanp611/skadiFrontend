@@ -33,10 +33,12 @@ import { PagesLoginComponent } from './pages/pages-login/pages-login.component';
 import { PagesRegisterComponent } from './pages/pages-register/pages-register.component';
 import { UsersProfileComponent } from './pages/users-profile/users-profile.component';
 import { PlantillasComponent } from './components/plantillas/plantillas.component';
+import { PaginasComponent } from './components/paginas/paginas.component';
 
 
 const routes: Routes = [
-  { path: 'plantilla', component: PlantillasComponent},
+  { path: 'plantilla', component: PlantillasComponent },
+  { path: 'paginas', component: PaginasComponent },
   { path: '', component: DashboardComponent },
   { path: 'dashboard', component: DashboardComponent },
   { path: 'alerts', component: AlertsComponent },

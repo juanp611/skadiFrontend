@@ -43,6 +43,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { PlantillasComponent } from './components/plantillas/plantillas.component';
+import { PaginasComponent } from './components/paginas/paginas.component';
 
 @NgModule({
   declarations: [
@@ -82,7 +83,8 @@ import { PlantillasComponent } from './components/plantillas/plantillas.componen
     PagesLoginComponent,
     PagesError404Component,
     PagesBlankComponent,
-    PlantillasComponent
+    PlantillasComponent,
+    PaginasComponent
   ],
   imports: [
     BrowserModule,

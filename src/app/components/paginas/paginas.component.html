@@ -1,0 +1,20 @@
+<main id="main" class="main">
+    <div class="pagetitle">
+        <h1>Paginas</h1>
+        <nav>
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a routerLink="/">Home</a></li>
+                <li class="breadcrumb-item">Paginas</li>
+            </ol>
+        </nav>
+    </div>
+
+    <div class="card">
+        <div class="card-body">
+            <h5 class="card-title">Cree y edite su pagina</h5>
+        </div>
+        <div (ngSubmit)="newpaginasEntry()" [formGroup]="paginasForm">
+            <div class="quill-editor-full">
+            </div>
+            <button type="submit" class="btn btn-primary">Guardar</button>     
+        </div>

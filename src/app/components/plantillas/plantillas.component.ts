@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder } from '@angular/forms';
+import { Router } from '@angular/router';
 import { PlantillaService } from 'src/app/services/plantilla.service';
 
 @Component({
@@ -8,9 +10,16 @@ import { PlantillaService } from 'src/app/services/plantilla.service';
 })
 export class PlantillasComponent implements OnInit {
   plantillaList: any = [];
-  constructor(private plantillaService: PlantillaService) { }
+  plantillaForm = this.formBuilder.group({
+    nombre: '',
+  })
 
-  ngOnInit(){
+  constructor(private plantillaService: PlantillaService,
+    private formBuilder: FormBuilder,
+    private router: Router
+  ) { }
+
+  ngOnInit() {
     this.getAllplantilla();
   }
   getAllplantilla() {
@@ -18,6 +27,18 @@ export class PlantillasComponent implements OnInit {
       this.plantillaList = data;
     });
   }
+  newplantillaEntry() {
+    this.plantillaService.newPlantilla(this.plantillaForm.value).subscribe(
+      () => {
+        //Redirigiendo a la ruta actual /animal y recargando la ventana
+        this.router.navigate(['/plantilla']).then(() => {
+          window.location.reload();
+        })
+      }
+    );
+  }
+
+
 
 
 }
