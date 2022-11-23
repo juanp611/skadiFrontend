@@ -17,4 +17,26 @@
             <div class="quill-editor-full">
             </div>
             <button type="submit" class="btn btn-primary">Guardar</button>     
+
         </div>
+   <br>     
+    <div class="col-lg-12">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Paginas registradas</h5>
+                <table class="table datatable">
+                    <thead>
+                        <tr>
+                            <th scope="col">pagina</th>>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let item of paginasList;">
+                            <td>{{item.codigo}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+ 
